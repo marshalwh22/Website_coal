@@ -1,14 +1,14 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f8fc;
+  background-color: #eef4fa;
   color: #222;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-  background: linear-gradient(to right, #003973, #005aa7);
+  background: linear-gradient(to right, #002c57, #005b99);
   color: white;
 }
 .logo {
@@ -16,7 +16,7 @@ body {
   font-weight: bold;
 }
 .cta-button {
-  background: #00b4d8;
+  background: #003f72;
   color: white;
   padding: 10px 20px;
   border-radius: 30px;
@@ -25,28 +25,41 @@ body {
   transition: background 0.3s;
 }
 .cta-button:hover {
-  background: #0077b6;
+  background: #004e99;
 }
 .hero {
-  background: linear-gradient(to right, #005aa7, #00b4d8);
+  background: linear-gradient(to right, #003f72, #0077c2);
   color: white;
   padding: 100px 20px;
   text-align: center;
 }
-.hero h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
+.hero-text.glass {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  max-width: 700px;
+  margin: auto;
 }
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
+.hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  animation: fadeInDown 2s ease;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .scroll-button {
   margin-top: 30px;
   padding: 12px 28px;
   background: white;
-  color: #005aa7;
+  color: #003f72;
   text-decoration: none;
   border-radius: 50px;
   display: inline-block;
@@ -54,7 +67,7 @@ body {
   transition: background 0.3s;
 }
 .scroll-button:hover {
-  background: #e0f0ff;
+  background: #ddeeff;
 }
 .produk {
   padding: 60px 20px;
