@@ -1,12 +1,12 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
+let index = 0;
+const images = document.querySelectorAll(".carousel-img");
 
-function showSlide() {
-  slides.forEach((s, i) => {
-    s.classList.toggle('active', i === slideIndex);
+function showNextImage() {
+  images.forEach((img, i) => {
+    img.classList.remove("active");
+    if (i === index) img.classList.add("active");
   });
-  slideIndex = (slideIndex + 1) % slides.length;
-  setTimeout(showSlide, 3000);
+  index = (index + 1) % images.length;
 }
 
-window.addEventListener('load', showSlide);
+setInterval(showNextImage, 3000);
