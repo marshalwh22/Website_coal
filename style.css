@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom right, #0a1f44, #3b5998);
@@ -62,4 +62,76 @@ header {
   .carousel-wrapper img {
     width: 100vw;
   }
+}
+ */
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #001f3f, #0074D9);
+  color: #ffffff;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.buttons .btn {
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: #7FDBFF;
+  color: #001f3f;
+}
+
+.btn.secondary {
+  border: 2px solid #7FDBFF;
+  color: #7FDBFF;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  height: 300px;
+  margin-top: 40px;
+}
+
+.carousel-container {
+  display: flex;
+  width: calc(300px * 5);
+  animation: slide 20s linear infinite;
+}
+
+.carousel-container img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1500px); }
 }
